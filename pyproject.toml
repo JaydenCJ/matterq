@@ -9,7 +9,7 @@ description = "Query a folder of Markdown by front matter: filter, sort, project
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }
-authors = [{ name = "JaydenCJ" }]
+authors = [{ name = "JaydenCJ", email = "aisingioro.kiyon@gmail.com" }]
 keywords = ["markdown", "front-matter", "query", "obsidian", "dataview", "notes", "cli", "yaml"]
 classifiers = [
     "Development Status :: 3 - Alpha",
