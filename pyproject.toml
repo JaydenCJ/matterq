@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "matterq"
+version = "0.1.0"
+description = "Query a folder of Markdown by front matter: filter, sort, project, output tables or JSON — Dataview-style queries for scripts, cron, and CI."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "JaydenCJ" }]
+keywords = ["markdown", "front-matter", "query", "obsidian", "dataview", "notes", "cli", "yaml"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Text Processing :: Markup :: Markdown",
+    "Topic :: Utilities",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+matterq = "matterq.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/JaydenCJ/matterq"
+Repository = "https://github.com/JaydenCJ/matterq"
+Issues = "https://github.com/JaydenCJ/matterq/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

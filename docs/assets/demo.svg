@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="590" viewBox="0 0 920 590" font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="14">
+  <!-- Terminal transcript of real matterq runs against examples/vault.
+       Text content is copied verbatim from actual executions. -->
+  <rect width="920" height="590" rx="10" fill="#0d1117"/>
+  <rect width="920" height="34" rx="10" fill="#161b22"/>
+  <rect y="20" width="920" height="14" fill="#161b22"/>
+  <circle cx="22" cy="17" r="6" fill="#ff5f57"/>
+  <circle cx="42" cy="17" r="6" fill="#febc2e"/>
+  <circle cx="62" cy="17" r="6" fill="#28c840"/>
+  <text x="460" y="22" fill="#8b949e" text-anchor="middle" font-size="12">matterq — query Markdown front matter from the shell</text>
+  <g fill="#c9d1d9">
+    <text x="24" y="64"><tspan fill="#7ee787">$</tspan> matterq query 'SELECT title, status, due FROM "projects"</text>
+    <text x="24" y="86">      WHERE status = "active" SORT due ASC' --root vault</text>
+    <text x="24" y="112" fill="#79c0ff">title             status  due</text>
+    <text x="24" y="134" fill="#8b949e">----------------  ------  ----------</text>
+    <text x="24" y="156">API migration     active  <tspan fill="#d29922">2026-07-20</tspan></text>
+    <text x="24" y="178">Website redesign  active  <tspan fill="#d29922">2026-08-01</tspan></text>
+    <text x="24" y="220"><tspan fill="#7ee787">$</tspan> matterq query 'SELECT title, rating FROM <tspan fill="#d2a8ff">#books</tspan> SORT rating DESC' \</text>
+    <text x="24" y="242">      --root vault --format csv</text>
+    <text x="24" y="268" fill="#79c0ff">title,rating</text>
+    <text x="24" y="290">Designing Data-Intensive Applications,<tspan fill="#7ee787">5</tspan></text>
+    <text x="24" y="312">Pragmatic Thinking and Learning,<tspan fill="#7ee787">4</tspan></text>
+    <text x="24" y="354"><tspan fill="#7ee787">$</tspan> matterq fields --root vault</text>
+    <text x="24" y="380" fill="#79c0ff">field        notes  coverage  types</text>
+    <text x="24" y="402" fill="#8b949e">-----------  -----  --------  ----------</text>
+    <text x="24" y="424">tags         7      100%      list</text>
+    <text x="24" y="446">status       5      71%       string</text>
+    <text x="24" y="468">title        5      71%       string</text>
+    <text x="24" y="490">priority     3      42%       <tspan fill="#d29922">int</tspan></text>
+    <text x="24" y="512" fill="#8b949e">...</text>
+    <text x="24" y="554"><tspan fill="#7ee787">$</tspan> matterq query 'WHERE due &lt;= 2026-07-31' --root vault --format count</text>
+    <text x="24" y="576" fill="#7ee787">1</text>
+  </g>
+</svg>
